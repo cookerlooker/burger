@@ -12,24 +12,12 @@ if (process.env.JAWSDB_URL) {
     host: 'localhost',
     user: 'root',
     password: 'root',
-    database: 'burgers_db'
+    database: 'burgers_db',
+    port: '8889'
+    
   });
 };
 
-// Setting up connection for use on Heroku
-if (process.env.JAWSDB_URL) {
-    connection = mysql.createConnection(process.envJASWSDB_URL);
 
-}
-
-// Localhost connection
-else {
-    connection = mysql.createConnection({
-        host:       'localhost',
-        user:       'root',
-        password:   'root',
-        database:   'burgers_db'
-    });
-};
 
 module.exports = connection; 

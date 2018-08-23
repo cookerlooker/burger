@@ -9,7 +9,7 @@ var burgers = {
         });
     },
     insertOne: function(valOfOtherCol, cb) {
-        orm.insertOne("burgers", valOfCol, valOfOtherCol, function(res) {
+        orm.insertOne("burgers", valOfOtherCol, function(res) {
             cb(res);
         });
     }
