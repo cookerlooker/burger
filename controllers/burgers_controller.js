@@ -26,14 +26,10 @@ router.get("/", function(req, res) {
 // POST request creates new data for database
 // Remember that we make up the route name here as well
 router.post("/api/burgers", function(req, res) {
-	burger.insertOne([
-		"burger_name"
-	], [
-		req.body.burger_name
-	], function(result) {
-		// Send back the ID of the new burger
-		res.json({ id: result.insertId });
-	});
+    burger.insertOne(req.body.burger_name,function(result){
+        console.log(result);
+        res.redirect("/")
+    });
 });
 
 // PUT request updates data.

@@ -9,9 +9,11 @@ var burgers = {
         });
     },
     insertOne: function(valOfOtherCol, cb) {
-        orm.insertOne("burgers", valOfOtherCol, function(res) {
-            cb(res);
-        });
+        orm.insertOne("burgers",[
+            "burger_name","devoured"
+            ],[
+            valOfOtherCol,false
+            ],cb);
     }
 
 };
