@@ -2,7 +2,7 @@
 // and then exporting the connection
 var mysql = require('mysql');
 var connection;
-
+require('dotenv').config();
 // Setting up connection for use on Heroku
 
 if (process.env.JAWSDB_URL) {
